@@ -1,0 +1,743 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <title>Adil Hussain | Contact</title>
+
+    <!-- Fonts & Icons -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+        :root {
+            --black: #111111;
+            --dark: #222222;
+            --grey: #666666;
+            --light-grey: #f5f5f5;
+            --border: rgba(0, 0, 0, 0.08);
+            --red: #e53935;
+            --red-dark: #b71c1c;
+
+            --shadow:
+                0 6px 18px rgba(0, 0, 0, 0.10);
+
+            --shadow-hover:
+                0 12px 28px rgba(0, 0, 0, 0.16);
+
+            --transition:
+                180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+
+            display: flex;
+            justify-content: center;
+
+            padding:
+                env(safe-area-inset-top)
+                env(safe-area-inset-right)
+                env(safe-area-inset-bottom)
+                env(safe-area-inset-left);
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #ffffff 0%,
+                    #fafafa 55%,
+                    #f4f4f4 100%
+                );
+
+            color: var(--black);
+            font-family: "Inter", sans-serif;
+
+            overflow-x: hidden;
+        }
+
+        /* --------------------------------
+           Main container
+        -------------------------------- */
+
+        .wrapper {
+            width: 100%;
+            max-width: 600px;
+
+            min-height: 100vh;
+            min-height: 100dvh;
+
+            padding:
+                48px 20px
+                32px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            animation: pageEnter 500ms ease both;
+        }
+
+        @keyframes pageEnter {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --------------------------------
+           Fullscreen button
+        -------------------------------- */
+
+        #fs-toggle {
+            position: fixed;
+            top: 14px;
+            right: 14px;
+
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid var(--border);
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--grey);
+
+            cursor: pointer;
+            z-index: 100;
+
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+            transition:
+                transform var(--transition),
+                background var(--transition),
+                color var(--transition),
+                box-shadow var(--transition);
+
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+
+            touch-action: manipulation;
+        }
+
+        #fs-toggle:hover {
+            background: var(--black);
+            color: #ffffff;
+            transform: rotate(8deg) scale(1.05);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.14);
+        }
+
+        #fs-toggle:active {
+            transform: scale(0.88);
+        }
+
+        #fs-toggle:focus-visible {
+            outline: 3px solid rgba(229, 57, 53, 0.35);
+            outline-offset: 3px;
+        }
+
+        /* --------------------------------
+           Name
+        -------------------------------- */
+
+        h1 {
+            margin-bottom: 22px;
+
+            font-size: clamp(2rem, 8vw, 2.5rem);
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+
+            text-align: center;
+        }
+
+        /* --------------------------------
+           Emergency heading
+        -------------------------------- */
+
+        .emergency-heading {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            max-width: 100%;
+
+            margin-bottom: 32px;
+            padding: 11px 17px;
+
+            border: 1.5px dashed var(--red);
+            border-radius: 9px;
+
+            color: var(--red);
+
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.45px;
+            line-height: 1.35;
+            text-align: center;
+            text-transform: uppercase;
+
+            background: rgba(229, 57, 53, 0.025);
+
+            animation: emergencyPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes emergencyPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 rgba(229, 57, 53, 0);
+            }
+
+            50% {
+                box-shadow: 0 0 18px rgba(229, 57, 53, 0.10);
+            }
+        }
+
+        /* --------------------------------
+           Links
+        -------------------------------- */
+
+        .links-container {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 13px;
+        }
+
+        .btn {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+
+            width: 100%;
+            min-height: 76px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 17px 20px;
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #3d3d3d 0%,
+                    #111111 100%
+                );
+
+            color: #ffffff;
+            text-decoration: none;
+
+            font-size: 1rem;
+            font-weight: 600;
+
+            box-shadow: var(--shadow);
+
+            transition:
+                transform var(--transition),
+                box-shadow var(--transition),
+                filter var(--transition);
+
+            cursor: pointer;
+
+            /*
+             * Prevents the browser from interpreting a quick
+             * touch as scrolling while the button is being pressed.
+             */
+            touch-action: manipulation;
+        }
+
+        /* Soft light travelling across the button */
+
+        .btn::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    transparent 25%,
+                    rgba(255, 255, 255, 0.12) 50%,
+                    transparent 75%
+                );
+
+            transform: translateX(-120%);
+
+            transition:
+                transform 500ms ease;
+
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            filter: brightness(1.08);
+        }
+
+        .btn:hover::before {
+            transform: translateX(120%);
+        }
+
+        /*
+         * Works with mouse clicks and touchscreen presses.
+         * :active is intentionally retained alongside the
+         * JavaScript class below.
+         */
+
+        .btn:active,
+        .btn.is-pressed {
+            transform: translateY(1px) scale(0.975);
+            box-shadow:
+                0 3px 8px rgba(0, 0, 0, 0.16);
+            filter: brightness(0.88);
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid rgba(229, 57, 53, 0.40);
+            outline-offset: 3px;
+        }
+
+        .btn i {
+            margin-bottom: 5px;
+            font-size: 1.35rem;
+
+            transition:
+                transform var(--transition);
+        }
+
+        .btn:hover i {
+            transform: translateY(-1px) scale(1.06);
+        }
+
+        .btn span {
+            margin-top: 2px;
+
+            font-size: 0.76rem;
+            font-weight: 400;
+
+            opacity: 0.72;
+        }
+
+        /* --------------------------------
+           Emergency call button
+        -------------------------------- */
+
+        .emergency-btn {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--red) 0%,
+                    var(--red-dark) 100%
+                );
+        }
+
+        .emergency-btn:hover {
+            filter: brightness(1.06);
+            box-shadow:
+                0 12px 28px rgba(183, 28, 28, 0.25);
+        }
+
+        /* --------------------------------
+           Touch ripple
+        -------------------------------- */
+
+        .ripple {
+            position: absolute;
+
+            width: 20px;
+            height: 20px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.25);
+
+            transform: translate(-50%, -50%) scale(0);
+
+            pointer-events: none;
+
+            animation: rippleEffect 500ms ease-out forwards;
+
+            z-index: 5;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: translate(-50%, -50%) scale(15);
+                opacity: 0;
+            }
+        }
+
+        /* --------------------------------
+           Footer
+        -------------------------------- */
+
+        footer {
+            margin-top: auto;
+            padding-top: 48px;
+
+            color: #999999;
+
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 1.8px;
+
+            text-align: center;
+        }
+
+        /* --------------------------------
+           Small screens
+        -------------------------------- */
+
+        @media (max-width: 420px) {
+            .wrapper {
+                padding:
+                    42px 15px
+                    28px;
+            }
+
+            h1 {
+                margin-bottom: 19px;
+            }
+
+            .emergency-heading {
+                margin-bottom: 26px;
+                padding: 10px 13px;
+
+                font-size: 0.72rem;
+            }
+
+            .links-container {
+                gap: 11px;
+            }
+
+            .btn {
+                min-height: 72px;
+                border-radius: 13px;
+            }
+
+            footer {
+                padding-top: 40px;
+            }
+        }
+
+        /* --------------------------------
+           Reduced motion accessibility
+        -------------------------------- */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button
+        id="fs-toggle"
+        type="button"
+        title="Toggle fullscreen"
+        aria-label="Toggle fullscreen"
+    >
+        <i class="bi bi-arrows-fullscreen" aria-hidden="true"></i>
+    </button>
+
+
+    <main class="wrapper">
+
+        <h1>Adil Hussain</h1>
+
+        <div class="emergency-heading">
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            <span>Call in case of emergency: +91 9797289770</span>
+        </div>
+
+
+        <nav
+            class="links-container"
+            aria-label="Contact and social links"
+        >
+
+            <a
+                href="tel:+919797289770"
+                class="btn emergency-btn"
+            >
+                <i
+                    class="bi bi-telephone-outbound-fill"
+                    aria-hidden="true"
+                ></i>
+
+                Press to Call
+
+                <span>+91 9797289770</span>
+            </a>
+
+
+            <a
+                href="https://wa.me/919797289770"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i
+                    class="bi bi-whatsapp"
+                    aria-hidden="true"
+                ></i>
+
+                WhatsApp
+            </a>
+
+
+            <a
+                href="mailto:adilhshaw@gmail.com"
+                class="btn"
+            >
+                <i
+                    class="bi bi-envelope-at"
+                    aria-hidden="true"
+                ></i>
+
+                Email
+
+                <span>adilhshaw@gmail.com</span>
+            </a>
+
+
+            <a
+                href="https://en.wikipedia.org/wiki/User:Adilalishah"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i
+                    class="bi bi-wikipedia"
+                    aria-hidden="true"
+                ></i>
+
+                Wikipedia Page
+            </a>
+
+
+            <a
+                href="https://twitter.com/Adilhussainshaw"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i
+                    class="bi bi-twitter-x"
+                    aria-hidden="true"
+                ></i>
+
+                Twitter / X
+            </a>
+
+
+            <a
+                href="https://facebook.com/Adilhussainshaw"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i
+                    class="bi bi-facebook"
+                    aria-hidden="true"
+                ></i>
+
+                Facebook
+            </a>
+
+
+            <a
+                href="https://instagram.com/Adilhussainshaw"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i
+                    class="bi bi-instagram"
+                    aria-hidden="true"
+                ></i>
+
+                Instagram
+            </a>
+
+        </nav>
+
+
+        <footer>
+            ADIL HUSSAIN • 2026
+        </footer>
+
+    </main>
+
+
+    <script>
+        /* --------------------------------
+           Fullscreen
+        -------------------------------- */
+
+        const fsToggle = document.getElementById("fs-toggle");
+
+        function updateFullscreenIcon() {
+            const icon = fsToggle.querySelector("i");
+
+            if (document.fullscreenElement) {
+                icon.className = "bi bi-fullscreen-exit";
+                fsToggle.setAttribute(
+                    "aria-label",
+                    "Exit fullscreen"
+                );
+            } else {
+                icon.className = "bi bi-arrows-fullscreen";
+                fsToggle.setAttribute(
+                    "aria-label",
+                    "Enter fullscreen"
+                );
+            }
+        }
+
+        fsToggle.addEventListener("click", async () => {
+            try {
+                if (!document.fullscreenElement) {
+                    await document.documentElement.requestFullscreen();
+                } else {
+                    await document.exitFullscreen();
+                }
+            } catch (error) {
+                /*
+                 * Some mobile browsers restrict fullscreen.
+                 * No intrusive alert is shown.
+                 */
+                console.log("Fullscreen unavailable:", error);
+            }
+
+            updateFullscreenIcon();
+        });
+
+        document.addEventListener(
+            "fullscreenchange",
+            updateFullscreenIcon
+        );
+
+        if (!document.fullscreenEnabled) {
+            fsToggle.style.display = "none";
+        }
+
+
+        /* --------------------------------
+           Button press + ripple effect
+           Works with mouse, touch and pen.
+        -------------------------------- */
+
+        document.querySelectorAll(".btn").forEach(button => {
+
+            button.addEventListener("pointerdown", event => {
+
+                button.classList.add("is-pressed");
+
+                const rect = button.getBoundingClientRect();
+
+                const ripple = document.createElement("span");
+
+                ripple.className = "ripple";
+
+                ripple.style.left =
+                    `${event.clientX - rect.left}px`;
+
+                ripple.style.top =
+                    `${event.clientY - rect.top}px`;
+
+                button.appendChild(ripple);
+
+                ripple.addEventListener(
+                    "animationend",
+                    () => ripple.remove()
+                );
+            });
+
+
+            const removePressedState = () => {
+                button.classList.remove("is-pressed");
+            };
+
+            button.addEventListener(
+                "pointerup",
+                removePressedState
+            );
+
+            button.addEventListener(
+                "pointercancel",
+                removePressedState
+            );
+
+            button.addEventListener(
+                "pointerleave",
+                removePressedState
+            );
+        });
+    </script>
+
+</body>
+</html>
+```
