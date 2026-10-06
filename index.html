@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
 <meta name="theme-color" content="#f7f7f7">
 <meta name="description" content="Contact and online profiles for Adil Hussain">
 <link rel="icon" type="image/png" href="https://drshahh.github.io/favicon.png">
 <link rel="apple-touch-icon" href="https://drshahh.github.io/favicon.png">
 <title>Adil Hussain | Contact</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
 <style>
 :root{--black:#111;--grey:#707070;--red:#e53935;--red-dark:#b71c1c;--white:#fff;--shadow:0 8px 24px #00000014;--shadow-hover:0 14px 34px #00000024;--radius:15px;--t:180ms cubic-bezier(.2,.8,.2,1)}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
-body{min-height:100vh;min-height:100dvh;font-family:Inter,sans-serif;color:var(--black);background:radial-gradient(circle at 50% 0,#fff 0,#fafafa 42%,#f2f2f2 100%);overflow-x:hidden}
-.page{width:100%;min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:32px 18px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
+button,a{-webkit-touch-callout:none}
+html{scroll-behavior:smooth;overscroll-behavior-x:none}
+body{min-height:100vh;min-height:100svh;min-height:100dvh;font-family:Inter,sans-serif;color:var(--black);background:radial-gradient(circle at 50% 0,#fff 0,#fafafa 42%,#f2f2f2 100%);overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.page{width:100%;min-height:100vh;min-height:100svh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:32px 18px}
 .card{width:100%;max-width:500px;padding:34px 28px 25px;background:#ffffffe0;border:1px solid #00000012;border-radius:24px;box-shadow:0 20px 55px #00000014;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);animation:enter .55s ease both}
 @keyframes enter{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
 .header{text-align:center;margin-bottom:27px}
@@ -28,12 +28,12 @@ body{min-height:100vh;min-height:100dvh;font-family:Inter,sans-serif;color:var(-
 .subtitle{margin-top:9px;color:var(--grey);font-size:.82rem}
 .emergency-note{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;padding:10px 13px;border:1px dashed #e53935a6;border-radius:11px;background:#e5393509;color:var(--red);font-size:.72rem;font-weight:600;line-height:1.35;text-align:center}
 .links{display:flex;flex-direction:column;gap:11px}
-.btn{position:relative;isolation:isolate;width:100%;min-height:70px;display:flex;align-items:center;padding:13px 17px;border:1px solid #ffffff14;border-radius:var(--radius);background:linear-gradient(135deg,#3c3c3c,#101010);color:var(--white);text-decoration:none;box-shadow:var(--shadow);cursor:pointer;overflow:hidden;transition:transform var(--t),box-shadow var(--t),filter var(--t);touch-action:manipulation}
+.btn{position:relative;font:inherit;isolation:isolate;width:100%;min-height:70px;display:flex;align-items:center;padding:13px 17px;border:1px solid #ffffff14;border-radius:var(--radius);background:linear-gradient(135deg,#3c3c3c,#101010);color:var(--white);text-decoration:none;box-shadow:var(--shadow);cursor:pointer;overflow:hidden;-webkit-user-select:none;user-select:none;transition:transform var(--t),box-shadow var(--t),filter var(--t);touch-action:manipulation}
 .btn:before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 25%,#ffffff1f 50%,transparent 75%);transform:translateX(-130%);transition:transform 550ms ease;pointer-events:none;z-index:-1}
 .btn-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;margin-right:13px;border-radius:11px;background:#ffffff1a;font-size:1.2rem;transition:transform var(--t),background var(--t)}
-.btn-content{min-width:0;display:flex;flex-direction:column;gap:3px}
+.btn-content{min-width:0;display:flex;flex:1;flex-direction:column;gap:3px}
 .btn-title{font-size:.94rem;font-weight:600;line-height:1.2}
-.btn-description{color:#ffffff9e;font-size:.7rem;line-height:1.25}
+.btn-description{color:#ffffff9e;font-size:.7rem;line-height:1.25;overflow-wrap:anywhere}
 .btn-arrow{margin-left:auto;color:#ffffff6b;font-size:.9rem;transition:transform var(--t),color var(--t)}
 .emergency{background:linear-gradient(135deg,var(--red),var(--red-dark))}
 .emergency .btn-icon{background:#ffffff26}
@@ -42,10 +42,8 @@ body{min-height:100vh;min-height:100dvh;font-family:Inter,sans-serif;color:var(-
 .ripple{position:absolute;width:20px;height:20px;border-radius:50%;background:#ffffff40;transform:translate(-50%,-50%) scale(0);pointer-events:none;animation:ripple .5s ease-out forwards;z-index:10}
 @keyframes ripple{to{transform:translate(-50%,-50%) scale(15);opacity:0}}
 .footer{margin-top:25px;text-align:center;color:#a0a0a0;font-size:.62rem;letter-spacing:1.5px}
-
-#fullscreen{position:fixed;top:15px;right:15px;width:38px;height:38px;display:grid;place-items:center;border:1px solid #00000012;border-radius:50%;background:#ffffffe0;color:#777;cursor:pointer;box-shadow:0 5px 16px #00000012;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform var(--t),background var(--t),color var(--t);touch-action:manipulation}
+#fullscreen{position:fixed;top:max(10px,env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right));width:38px;height:38px;display:grid;place-items:center;border:1px solid #00000012;border-radius:50%;background:#ffffffe0;color:#777;cursor:pointer;box-shadow:0 5px 16px #00000012;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform var(--t),background var(--t),color var(--t);touch-action:manipulation}
 #fullscreen:focus-visible,.btn:focus-visible{outline:3px solid #e5393559;outline-offset:3px}
-
 @media(hover:hover) and (pointer:fine){
 .btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);filter:brightness(1.06)}
 .btn:hover:before{transform:translateX(130%)}
@@ -54,12 +52,10 @@ body{min-height:100vh;min-height:100dvh;font-family:Inter,sans-serif;color:var(-
 .emergency:hover{box-shadow:0 14px 34px #b71c1c3d}
 #fullscreen:hover{transform:scale(1.06) rotate(5deg);background:var(--black);color:#fff}
 }
-
 .btn:active,.btn.is-pressed{transform:scale(.975) translateY(1px);box-shadow:0 3px 9px #00000026;filter:brightness(.88)}
 #fullscreen:active{transform:scale(.88)}
-
 @media(max-width:520px){
-.page{align-items:flex-start;padding:22px 12px 20px}
+.page{align-items:flex-start;padding:22px 12px max(20px,env(safe-area-inset-bottom))}
 .card{margin-top:28px;padding:30px 14px 21px;border-radius:21px;box-shadow:0 14px 40px #00000012}
 .header{margin-bottom:23px}
 .subtitle{font-size:.76rem}
@@ -68,25 +64,22 @@ body{min-height:100vh;min-height:100dvh;font-family:Inter,sans-serif;color:var(-
 .btn-title{font-size:.89rem}
 .btn-description{font-size:.67rem}
 .section-label{margin-top:21px}
-#fullscreen{top:10px;right:10px}
+#fullscreen{top:max(10px,env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right))}
 }
-
 @media(max-width:360px){
 .card{padding-left:11px;padding-right:11px}
 .btn-icon{margin-right:9px}
 .btn-arrow{display:none}
 }
-
 @media(prefers-reduced-motion:reduce){
 *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 html{scroll-behavior:auto}
 }
-
 /* UPI copy confirmation */
 #toast{
 position:fixed;
 left:50%;
-bottom:25px;
+bottom:max(18px,calc(env(safe-area-inset-bottom) + 8px));
 z-index:100;
 padding:10px 16px;
 border-radius:10px;
@@ -106,107 +99,85 @@ transform:translate(-50%,0);
 }
 </style>
 </head>
-
 <body>
-
 <button id="fullscreen" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">
 <i class="bi bi-arrows-fullscreen" aria-hidden="true"></i>
 </button>
-
 <main class="page">
 <section class="card">
-
 <header class="header">
 <h1 class="name">Adil Hussain</h1>
 <p class="subtitle">Contact &amp; online profiles</p>
 </header>
-
 <div class="emergency-note">
 <i class="bi bi-info-circle" aria-hidden="true"></i>
 <span>For urgent matters, please call directly</span>
 </div>
-
 <nav class="links" aria-label="Contact">
-
 <a href="tel:+919797289770" class="btn emergency">
 <span class="btn-icon"><i class="bi bi-telephone-fill" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Call</span><span class="btn-description">+91 9797289770</span></span>
 <i class="bi bi-chevron-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://wa.me/919797289770" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">WhatsApp</span><span class="btn-description">Send me a message</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="sms:+919797289770" class="btn">
 <span class="btn-icon"><i class="bi bi-chat-left-text" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">SMS</span><span class="btn-description">Send a text message</span></span>
 <i class="bi bi-chevron-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="mailto:adilhshaw@gmail.com" class="btn">
 <span class="btn-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Email</span><span class="btn-description">adilhshaw@gmail.com</span></span>
 <i class="bi bi-chevron-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://drshahh.github.io/contact.vcf" download="Adil-Hussain.vcf" class="btn">
 <span class="btn-icon"><i class="bi bi-person-vcard-fill" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Save Contact</span><span class="btn-description">Download my contact card</span></span>
 <i class="bi bi-download btn-arrow" aria-hidden="true"></i>
 </a>
-
 <!-- UPI: copies ID instead of opening a payment app -->
-<a href="#" class="btn" id="copyUpi">
+<a href="https://drshahh.github.io/#" class="btn" id="copyUpi" aria-label="Copy UPI ID adilhshaw at okaxis">
 <span class="btn-icon"><i class="bi bi-wallet2" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Pay via UPI</span><span class="btn-description">Copy UPI ID: adilhshaw@okaxis</span></span>
 <i class="bi bi-copy btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="facetime:+919797289770" class="btn">
 <span class="btn-icon"><i class="bi bi-camera-video-fill" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">FaceTime</span><span class="btn-description">Start a FaceTime call</span></span>
 <i class="bi bi-camera-video btn-arrow" aria-hidden="true"></i>
 </a>
-
 </nav>
-
-<div class="section-label">Online</div>
-
+<h2 class="section-label">Online</h2>
 <nav class="links" aria-label="Online profiles">
-
 <a href="https://www.linkedin.com/in/adilhussainshah/" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-linkedin" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">LinkedIn</span><span class="btn-description">Professional profile</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://instagram.com/drshahadilhussain" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-instagram" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Instagram</span><span class="btn-description">@drshahadilhussain</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://facebook.com/drshahadilhussain" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-facebook" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Facebook</span><span class="btn-description">@drshahadilhussain</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://www.threads.net/@drshahadilhussain" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-threads" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Threads</span><span class="btn-description">@drshahadilhussain</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://twitter.com/drshahadil" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-twitter-x" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">X</span><span class="btn-description">@drshahadil</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://www.snapchat.com/add/adilh.shah" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon">
 <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true">
@@ -216,62 +187,45 @@ transform:translate(-50%,0);
 <span class="btn-content"><span class="btn-title">Snapchat</span><span class="btn-description">adilh.shah</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://en.wikipedia.org/wiki/User:Adilalishah" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-wikipedia" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Wikipedia</span><span class="btn-description">Wikipedia profile</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 </nav>
-
-<div class="section-label">Professional</div>
-
+<h2 class="section-label">Professional</h2>
 <nav class="links" aria-label="Professional profiles">
-
-<a href="https://scholar.google.com/citations?user=o-aafLkAAAAJ&amp;hl=en" class="btn" target="_blank" rel="noopener noreferrer">
+<a href="https://scholar.google.com/citations?user=o-aafLkAAAAJ&hl=en" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">Google Scholar</span><span class="btn-description">Research profile and publications</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 <a href="https://orcid.org/0000-0002-7738-8328" class="btn" target="_blank" rel="noopener noreferrer">
 <span class="btn-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span>
 <span class="btn-content"><span class="btn-title">ORCID</span><span class="btn-description">0000-0002-7738-8328</span></span>
 <i class="bi bi-box-arrow-up-right btn-arrow" aria-hidden="true"></i>
 </a>
-
 </nav>
-
 <footer class="footer">ADIL HUSSAIN • 2026</footer>
-
 </section>
 </main>
-
 <div id="toast" role="status" aria-live="polite">UPI ID copied</div>
-
 <script>
 const fs=document.getElementById("fullscreen");
-
 function fsState(){
 const i=fs.querySelector("i"),on=!!document.fullscreenElement;
 i.className=on?"bi bi-fullscreen-exit":"bi bi-arrows-fullscreen";
 fs.setAttribute("aria-label",on?"Exit fullscreen":"Enter fullscreen");
 fs.title=on?"Exit fullscreen":"Enter fullscreen";
 }
-
 fs.addEventListener("click",async()=>{
 try{
 document.fullscreenElement?await document.exitFullscreen():await document.documentElement.requestFullscreen()
-}catch(e){console.log("Fullscreen unavailable:",e)}
+}catch(e){}
 fsState()
 });
-
 document.addEventListener("fullscreenchange",fsState);
-
 if(!document.fullscreenEnabled)fs.style.display="none";
-
-
 /* Ripple effect */
 document.querySelectorAll(".btn").forEach(b=>{
 b.addEventListener("pointerdown",e=>{
@@ -283,43 +237,41 @@ x.style.top=`${e.clientY-r.top}px`;
 b.appendChild(x);
 x.addEventListener("animationend",()=>x.remove())
 });
-
 ["pointerup","pointercancel","pointerleave"].forEach(e=>
 b.addEventListener(e,()=>b.classList.remove("is-pressed"))
 );
 });
-
-
 /* Copy UPI ID */
 const copyUpi=document.getElementById("copyUpi");
 const toast=document.getElementById("toast");
-
 copyUpi.addEventListener("click",async e=>{
 e.preventDefault();
-
 const upiId="adilhshaw@okaxis";
-
+let copied=false;
 try{
+if(navigator.clipboard&&window.isSecureContext){
 await navigator.clipboard.writeText(upiId);
-}catch(err){
+copied=true;
+}
+}catch(err){}
+if(!copied){
 const textarea=document.createElement("textarea");
 textarea.value=upiId;
+textarea.setAttribute("readonly","");
 textarea.style.position="fixed";
+textarea.style.top="-9999px";
 textarea.style.opacity="0";
 document.body.appendChild(textarea);
 textarea.focus();
 textarea.select();
-document.execCommand("copy");
+try{copied=document.execCommand("copy");}catch(err){}
 textarea.remove();
 }
-
+if(!copied)return;
 toast.classList.add("show");
-
-setTimeout(()=>{
-toast.classList.remove("show");
-},1800);
+clearTimeout(window.__upiToastTimer);
+window.__upiToastTimer=setTimeout(()=>toast.classList.remove("show"),1800);
 });
 </script>
-
 </body>
 </html>
